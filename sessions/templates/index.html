@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SESSIONS</title>
+</head>
+<body>
+    <div id="sessions">
+        {% for session in sessions %}
+        <div class="session">
+            <h3>{{ session.title }}</h3>
+            {{ session.author }}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
