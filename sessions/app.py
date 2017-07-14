@@ -11,4 +11,4 @@ basepath = os.path.dirname(os.path.realpath(__file__))
 
 debug = True
 host = '0.0.0.0'
-port = 6112
+port = 7352
