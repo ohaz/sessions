@@ -3,6 +3,7 @@ from session import Session
 import json
 import os
 from app import app, basepath
+import codecs
 
 origin = None
 
@@ -12,7 +13,7 @@ def index():
     if not os.path.exists(os.path.join('git', 'sessionsTest', 'sessions.json')):
         abort(404)
     jsonl = None
-    with open(os.path.join('git', 'sessionsTest', 'sessions.json')) as f:
+    with codecs.open(os.path.join('git', 'sessionsTest', 'sessions.json'), 'r', 'utf-8') as f:
         jsonl = json.load(f)
     sessions = [Session(title=x['title'], author=x['author']) for x in jsonl['sessions']]
     return render_template('index.html', sessions=sessions)

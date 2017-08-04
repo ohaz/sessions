@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>SESSIONS</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div id="sessions">
+        <h1>Session Vorschläge:</h1>
         {% for session in sessions %}
         <div class="session">
             <h3>{{ session.title }}</h3>
             {{ session.author }}
+            <hr>
         </div>
         {% endfor %}
     </div>

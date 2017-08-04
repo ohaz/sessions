@@ -1,0 +1,12 @@
+#sessions{
+    margin: 20px;
+}
+
+.session {
+    margin-top: 10px;
+    width: 750px;
+}
+
+.session > h3 {
+    color: #FFA500;
+}
